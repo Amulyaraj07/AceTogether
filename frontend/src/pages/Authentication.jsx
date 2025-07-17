@@ -39,7 +39,7 @@ export default function Authentication() {
       try{
         if(formState===0){
           let result=await handleLogin(username,password);
-          console("Logged in Succesfully")
+          console.log("Logged in Succesfully")
         }
         if(formState===1){
             let result=await handleRegister(name,username,password);
