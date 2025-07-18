@@ -58,12 +58,6 @@ export default function VideoMeet() {
 
     let [videos, setVideos] = useState([])
 
-    // TODO
-    // if(isChrome() === false) {
-
-
-    // }
-
     useEffect(() => {
         console.log("HELLO")
         getPermissions();

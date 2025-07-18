@@ -54,7 +54,7 @@ function HomeComponent() {
             <div className="meetContainer">
                 <div className="leftPanel">
                     <div>
-                        <h2>Providing Quality Video Call Just Like Quality Education</h2>
+                        <h2>Providing Excellent Opportunity to connect with your peers and Prepare Together</h2>
 
                         <div style={{ display: 'flex', gap: "10px" }}>
 
@@ -65,7 +65,7 @@ function HomeComponent() {
                     </div>
                 </div>
                 <div className='rightPanel'>
-                    <img srcSet='/logo3.png' alt="" />
+                    <img srcSet='/demo.jpg' alt="" />
                 </div>
             </div>
         </>
