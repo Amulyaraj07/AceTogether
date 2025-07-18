@@ -8,6 +8,10 @@ import { connectToSocket } from "./controllers/socketManager.js";
 const app = express();
 const server = createServer(app); //creating a server instance
 const io = connectToSocket(server); //creating a socket.io instance
+import dotenv from "dotenv";
+dotenv.config();
+
+const mongoURL = process.env.MONGO_URL;
 
 app.set("port", process.env.PORT || 3000);
 app.use(cors()); //allowing cross-origin requests
@@ -22,9 +26,7 @@ app.use("/api/v1/users", userRoutes); //setting up user routes
 // });
 
 const start = async () => {
-  const connectionDb = await mongoose.connect(
-    "mongodb+srv://amulyaraj1234:amulya1234@cluster0.bvmcmtk.mongodb.net/"
-  );
+  const connectionDb = await mongoose.connect(mongoURL);
   console.log(`MongoDB connected: ${connectionDb.connection.host}`);
   server.listen(app.get("port"), () => {
     console.log("Server is running on port 3000");
