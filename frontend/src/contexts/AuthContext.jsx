@@ -3,8 +3,8 @@ import React, { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { StatusCodes } from "http-status-codes";
-import server from "../environment";
 
+const server = import.meta.env.VITE_SERVER;
 export const AuthContext=createContext({});
 
 const client=axios.create({
